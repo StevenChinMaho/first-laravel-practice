@@ -4,9 +4,15 @@
 
 ## Prerequisites
 
-在開始前，你會需要在電腦上安裝好 `Docker Desktop`，安裝請參考 [Docker官方文件](https://docs.docker.com/get-started/get-docker/)。
+在開始前，你會需要在電腦上安裝好 `Docker Desktop`，安裝請參考 [Docker官方文件](https://docs.docker.com/get-started/get-docker/)。並且在 `Settings => Resources => WSL Integration` 中啟用以下功能:
+
+- Enable integration with my default WSL distro
+
+![Setting.png](assets/image.png)
 
 ## 安裝步驟
+
+**以下步驟均須在專案根目錄中執行。**
 
 ### 1. 複製環境變數檔案
 
@@ -20,7 +26,7 @@ cp .env.example .env
 
 你有兩個選擇:  
 
-#### 1. 使用 Docker 的 Composer 執行一次性安裝
+#### A. 使用 Docker 的 Composer 執行一次性安裝
 
 這個指令會直接使用現成的 `Docker` 容器來運行 `PHP` 與 `Composer` 來將 `vendor` 資料夾下載完成，並且完成後會移除容器自身。
 
@@ -33,7 +39,7 @@ cp .env.example .env
     composer install --ignore-platform-reqs
  ```
 
-#### 2. 安裝全域 PHP 與 Composer
+#### B. 安裝全域 PHP 與 Composer
 
 這個指令會一口氣把 `PHP 8.4` 與 `Composer` 安裝在作業系統中:
 
@@ -49,7 +55,15 @@ composer install
 
 上述兩種方法都可以將 `vendor` 下載下來。
 
-#### 3. 啟動 Sail 腳本
+### 3. 建構 Docker Image
+
+開始建構此容器的 `Image`，這可能會需要花費幾分鐘的時間。
+
+```bash
+./vendor/bin/sail build --no-cache
+```
+
+### 4. 啟動 Sail 腳本
 
 這個指令會運行自動啟動專案的容器。
 
@@ -57,7 +71,7 @@ composer install
 ./vendor/bin/sail up -d
 ```
 
-#### 4. 產生應用程式金鑰
+### 5. 產生應用程式金鑰
 
 因為 `.env` 是全新的，因此需要重新產生專屬金鑰:
 
@@ -65,7 +79,7 @@ composer install
 ./vendor/bin/sail artisan key:generate
 ```
 
-#### 5. 執行資料庫遷移
+### 6. 執行資料庫遷移
 
 讓此專案能生成出正確的資料庫:
 
