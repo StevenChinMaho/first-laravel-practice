@@ -2,11 +2,23 @@
 
 此專案必須在Linux或WSL2中運行並操作，不可使用Powershell。
 
+![PHP Version](https://img.shields.io/badge/php-8.5-777bb4?logo=php)
+![Laravel Version](https://img.shields.io/badge/laravel-13.x-ff2d20?logo=laravel)
+![MySQL Version](https://img.shields.io/badge/mysql-8.4.8-4479A1?logo=mysql)
+![Docker](https://img.shields.io/badge/docker-29.2-2496ed?logo=docker)
+![Docker Compose](https://img.shields.io/badge/docker_compose-5.1.0-2496ed?logo=docker)
+
+## 📑 目錄
+
+* [Prerequisites](#prerequisites)
+* [安裝步驟](#安裝步驟)
+* [常用指令](#常用指令)
+
 ## Prerequisites
 
 在開始前，你會需要在電腦上安裝好 `Docker Desktop`，安裝請參考 [Docker官方文件](https://docs.docker.com/get-started/get-docker/)。並且在 `Settings => Resources => WSL Integration` 中啟用以下功能:
 
-- Enable integration with my default WSL distro
+- ✅ Enable integration with my default WSL distro
 
 ![Setting.png](assets/image.png)
 
@@ -87,7 +99,7 @@ composer install
 ./vendor/bin/sail artisan migrate
 ```
 
-## 啟動、存取、及關閉
+## 常用指令
 
 此指令可以啟動容器:
 
@@ -109,4 +121,17 @@ composer install
 
 ```bash
 ./vendor/bin/sail down
+```
+
+若是覺得 `./vendor/bin/sail` 很冗長，可以用以下別名:
+
+```bash
+alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
+```
+
+這樣以後就可以用 `sail` 來代替 `./vendor/bin/sail`，但是這個重開終端機後就會消失，如果要永久啟用的話可以使用以下指令:
+
+```bash
+echo "alias sail='sh \$([ -f sail ] && echo sail || echo vendor/bin/sail)'" >> ~/.bashrc
+source ~/.bashrc
 ```
