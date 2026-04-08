@@ -99,6 +99,14 @@ composer install
 ./vendor/bin/sail artisan migrate
 ```
 
+### 7. 安裝 npm 套件
+
+讀取 `package.json` 並下載依賴套件，生成 `node_modules` 目錄存放套件。
+
+```bash
+sail npm install
+```
+
 ## 常用指令
 
 此指令可以啟動容器:
@@ -134,4 +142,16 @@ alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 ```bash
 echo "alias sail='sh \$([ -f sail ] && echo sail || echo vendor/bin/sail)'" >> ~/.bashrc
 source ~/.bashrc
+```
+
+啟動前端開發 Vite 伺服器，及時編譯並提供 CSS, JS 等資源，開發時使用。
+
+```bash
+sail npm run dev
+```
+
+執行 Vite 生產模式打包流程，將 CSS, JS, 圖片等資源壓縮並輸入到 `public/build`。
+
+```bash
+sail npm run build
 ```
