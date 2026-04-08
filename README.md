@@ -5,10 +5,10 @@
 ![PHP Version](https://img.shields.io/badge/php-8.5-777bb4?logo=php)
 ![Laravel Version](https://img.shields.io/badge/laravel-13.x-ff2d20?logo=laravel)
 ![MySQL Version](https://img.shields.io/badge/mysql-8.4.8-4479A1?logo=mysql)
-![Docker](https://img.shields.io/badge/docker-29.2-2496ed?logo=docker)
-![Docker Compose](https://img.shields.io/badge/docker_compose-5.1.0-2496ed?logo=docker)
+![Docker](https://img.shields.io/badge/docker-29.3-2496ed?logo=docker)
+![Docker Compose](https://img.shields.io/badge/docker_compose-5.1.1-2496ed?logo=docker)
 
-## 📑 目錄
+## 目錄
 
 * [Prerequisites](#prerequisites)
 * [安裝步驟](#安裝步驟)
@@ -18,7 +18,7 @@
 
 在開始前，你會需要在電腦上安裝好 `Docker Desktop`，安裝請參考 [Docker官方文件](https://docs.docker.com/get-started/get-docker/)。並且在 `Settings => Resources => WSL Integration` 中啟用以下功能:
 
-- ✅ Enable integration with my default WSL distro
+* ✅ Enable integration with my default WSL distro
 
 ![Setting.png](assets/image.png)
 
