@@ -5,7 +5,6 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-    <h1>咕嚕靈波~</h1>
-    <a href="{{ route('welcome') }}">Welcome</a>
+    <h1>Organization</h1>
 </body>
 </html>
