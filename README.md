@@ -1,6 +1,6 @@
 # Laravel 後端框架練習
 
-此專案必須在Linux或WSL2中運行並操作，不可使用Powershell。
+此專案必須在 Linux 或 WSL2 中運行並操作，不可使用 Powershell。
 
 ![PHP Version](https://img.shields.io/badge/php-8.5-777bb4?logo=php)
 ![Laravel Version](https://img.shields.io/badge/laravel-13.x-ff2d20?logo=laravel)
