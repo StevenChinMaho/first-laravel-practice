@@ -5,8 +5,8 @@
 ![PHP Version](https://img.shields.io/badge/php-8.5-777bb4?logo=php)
 ![Laravel Version](https://img.shields.io/badge/laravel-13.x-ff2d20?logo=laravel)
 ![MySQL Version](https://img.shields.io/badge/mysql-8.4.8-4479A1?logo=mysql)
-![Docker](https://img.shields.io/badge/docker-29.3-2496ed?logo=docker)
-![Docker Compose](https://img.shields.io/badge/docker_compose-5.1.1-2496ed?logo=docker)
+![Docker](https://img.shields.io/badge/docker-29.4-2496ed?logo=docker)
+![Docker Compose](https://img.shields.io/badge/docker_compose-5.1.2-2496ed?logo=docker)
 
 ## 目錄
 
