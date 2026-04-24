@@ -11,6 +11,10 @@ Route::get('/welcome', function () {
     return view('welcome');
 })->name('welcome');
 
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
 Route::post("/formsubmitted", function (Request $request) {
     $validated = $request->validate([
         'fullname' => 'required|min:3|max:30',

@@ -9,8 +9,3 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
-
-h1 {
-    font-size: 100px;
-    font-weight: bolder;
-}
